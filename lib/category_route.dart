@@ -19,25 +19,13 @@ class CategoryRoute extends StatelessWidget {
   const CategoryRoute({Key? key}) : super(key: key);
 
   static const _categoryNames = <String>[
-    'Length',
-    'Area',
-    'Volume',
-    'Mass',
-    'Time',
-    'Digital Storage',
-    'Energy',
-    'Currency',
-  ];
-
-  static const _baseColors = <Color>[
-    Colors.teal,
-    Colors.orange,
-    Colors.pinkAccent,
-    Colors.blueAccent,
-    Colors.yellow,
-    Colors.greenAccent,
-    Colors.purpleAccent,
-    Colors.red,
+    'Martin Btx',
+    'Nicolas Lepage',
+    'Ugo Pelissier',
+    'Mathis Egnell',
+    'Gabriele Dabbaghian',
+    'Hanane El Hadjji',
+    'Raphael Toledano',
   ];
 
   /// Makes the correct number of rows for the list view.
@@ -57,14 +45,13 @@ class CategoryRoute extends StatelessWidget {
     for (var i = 0; i < _categoryNames.length; i++) {
       categories.add(Category(
         name: _categoryNames[i],
-        color: _baseColors[i] as ColorSwatch<dynamic>,
-        iconLocation: Icons.biotech,
+        iconLocation: Icons.account_circle_outlined,
       ));
     }
 
     final listView = Container(
       color: _backgroundColor,
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(vertical: 0.0),
       child: _buildCategoryWidgets(categories),
     );
 
