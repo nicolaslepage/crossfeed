@@ -23,6 +23,12 @@ const String someText =
 /// a colored [InkWell] animation.
 class Category extends StatelessWidget {
   final String name;
+  final String workout;
+  final String workouttype;
+  final String mouvements;
+  final String score;
+  final String weight;
+  final String rank;
   final IconData iconLocation;
 
   /// Creates a [Category].
@@ -33,6 +39,12 @@ class Category extends StatelessWidget {
   const Category({
     Key? key,
     required this.name,
+    required this.workout,
+    required this.workouttype,
+    required this.mouvements,
+    required this.score,
+    required this.weight,
+    required this.rank,
     required this.iconLocation,
   }) : super(key: key);
 
@@ -46,101 +58,136 @@ class Category extends StatelessWidget {
   // See https://api.flutter.dev/flutter/material/Theme-class.html
   Widget build(BuildContext context) {
     // TODO: Build the custom widget here, referring to the Specs.
-    return Material(
-      color: Colors.white,
-      child: Column(
-        children : [
-          Row(
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10.0),
+      child:  Material(
+        color: Colors.white,
+        child: Column(
             children : [
-            Padding(
-              padding: const EdgeInsets.only(left: 50.0),
-              child: Icon(
-                iconLocation,
-                size: 30.0,
-              ),
-            ),
-            Center(
-              child: Text(
-                name,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 10, color: Colors.black, fontWeight: FontWeight.bold),
-              ),
-            ),
-            ]
-          ),
-          Container(
-            color: Colors.grey[200],
-            child :
-            Center(
-              child: Text(
-                someText,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline5,
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.brown[100],
-            child:
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children : const [
-                  Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: Icon(
-                      Icons.thumb_up_alt_outlined,
-                      size: 30.0,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: Icon(
-                      Icons.message,
-                      size: 30.0,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: Icon(
-                      Icons.share,
-                      size: 30.0,
-                    ),
-                  ),
-                ]
-            ),
-          ),
-          Container(
-            color: Colors.brown[100],
-            child:
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children : const [
-                  Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: Icon(
-                      Icons.thumb_up_alt_outlined,
-                      size: 30.0,
+                  children : [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Icon(
+                        iconLocation,
+                        size: 30.0,
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        name,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(fontSize: 10, color: Colors.black, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ]
+              ),
+              Container(
+                color: Colors.grey[200],
+                child : Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Center(
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(
+                        text: workout,
+                        style: const TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
+                        children:  <TextSpan>[
+                          TextSpan(text: workouttype, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
+                          TextSpan(text: mouvements, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300)),
+                        ],
+                      ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: Icon(
-                      Icons.message,
-                      size: 30.0,
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: Icon(
-                      Icons.share,
-                      size: 30.0,
-                    ),
-                  ),
-                ]
-            ),
-          ),
-        ]
-      )
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                child:
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children : [
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Center(
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              text: 'Score: \n',
+                              style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300),
+                              children:  <TextSpan>[
+                                TextSpan(text: score, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Center(
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              text: 'Weight: \n',
+                              style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300),
+                              children:  <TextSpan>[
+                                TextSpan(text: weight, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Center(
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              text: 'Rank: \n',
+                              style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300),
+                              children:  <TextSpan>[
+                                TextSpan(text: rank, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]
+                ),
+              ),
+              Container(
+                color: Colors.brown[100],
+                child:
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children : const [
+                      Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Icon(
+                          Icons.thumb_up_alt_outlined,
+                          size: 30.0,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Icon(
+                          Icons.message_outlined,
+                          size: 30.0,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Icon(
+                          Icons.share_outlined,
+                          size: 30.0,
+                        ),
+                      ),
+                    ]
+                ),
+              ),
+            ]
+        )
+      ),
     );
   }
 }
