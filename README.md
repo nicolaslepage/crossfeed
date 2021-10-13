@@ -1,16 +1,7 @@
-# rectangle
+# CrossFeed
 
-A new Flutter project.
+This project is a social network app for crossfiters.
 
-## Getting Started
+The aim is to expand the tight crossfit community thanks to the internet by being able to post recently completed WODs and PRs.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Based on the sharing of performance, the app automatically compares your PRs to the rest of the community in order to guage your levelof fitness and to identify your strenghts and weaknesses.
