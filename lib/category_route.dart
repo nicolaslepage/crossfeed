@@ -51,31 +51,31 @@ class CategoryRoute extends StatelessWidget {
   static const _categoryWorkoutmouvements = <String>[
 
     "1 mile run\n"
-    "100 pull-ups\n"
-    "200 push-ups\n"
-    "300 squats\n"
-    "1 mile run",
+        "100 pull-ups\n"
+        "200 push-ups\n"
+        "300 squats\n"
+        "1 mile run",
 
     "21-15-9\n"
-    "Thrusters\n"
-    "Pull-ups",
+        "Thrusters\n"
+        "Pull-ups",
 
     "50-40-30-20-10\n"
-    "Double unders\n"
-    "Sit-ups",
+        "Double unders\n"
+        "Sit-ups",
 
     "100 Thrusters\n"
-    "EMOM: 5 burpees",
+        "EMOM: 5 burpees",
 
     '30 Ground to overhead',
 
     "Run 1 Mile\n"
-    "Row 2K\n"
-    "Run 1 Mile",
+        "Row 2K\n"
+        "Run 1 Mile",
 
     "5 Pull-ups\n"
-    "10 Push-ups\n"
-    "15 Squats",
+        "10 Push-ups\n"
+        "15 Squats",
   ];
 
   static const _categoryscore = <String>[
@@ -141,23 +141,6 @@ class CategoryRoute extends StatelessWidget {
       child: _buildCategoryWidgets(categories),
     );
 
-    final appBar = AppBar(
-        elevation: 0.0,
-        title: RichText(
-          text: TextSpan(
-            text: 'Cross',
-            style: TextStyle(fontSize: 30, color: Colors.red.shade900, fontWeight: FontWeight.bold),
-            children: const <TextSpan>[
-              TextSpan(text: '/', style: TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold)),
-              TextSpan(text: 'Feed', style: TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold)),
-            ],
-          ),
-        ),
-        backgroundColor: Colors.brown[50],);
-
-    return Scaffold(
-      appBar: appBar,
-      body: listView,
-    );
+    return listView;
   }
 }

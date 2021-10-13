@@ -6,8 +6,6 @@
 // https://www.dartlang.org/guides/language/effective-dart/style#ordering
 import 'package:flutter/material.dart';
 
-const _rowHeight = 500.0;
-
 const String someText =
     "Murph :\n"
     "For Time\n"
@@ -108,7 +106,7 @@ class Category extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children : [
                       Padding(
-                        padding: const EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.symmetric(vertical: 5.0),
                         child: Center(
                           child: RichText(
                             textAlign: TextAlign.center,
@@ -123,7 +121,7 @@ class Category extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.symmetric(vertical: 5.0),
                         child: Center(
                           child: RichText(
                             textAlign: TextAlign.center,
@@ -138,7 +136,7 @@ class Category extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.symmetric(vertical: 5.0),
                         child: Center(
                           child: RichText(
                             textAlign: TextAlign.center,
@@ -162,21 +160,18 @@ class Category extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children : const [
                       Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Icon(
-                          Icons.thumb_up_alt_outlined,
-                          size: 30.0,
-                        ),
+                        padding: EdgeInsets.symmetric(vertical: 5.0),
+                        child: ImageIcon( AssetImage('assets/fist_outlined.png'), size : 30.0,),
                       ),
                       Padding(
-                        padding: EdgeInsets.all(5.0),
+                        padding: EdgeInsets.symmetric(vertical: 5.0),
                         child: Icon(
                           Icons.message_outlined,
                           size: 30.0,
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.all(5.0),
+                        padding: EdgeInsets.symmetric(vertical: 5.0),
                         child: Icon(
                           Icons.share_outlined,
                           size: 30.0,
