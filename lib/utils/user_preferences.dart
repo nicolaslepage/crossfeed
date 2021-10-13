@@ -5,7 +5,7 @@ class UserPreferences {
     name: 'Nicolas Lepage',
     email: 'npf.lepage@gmail.com',
     about:
-        'I <3 Crossfit',
+        '<3 Crossfit World champion 2022 <3',
     isDarkMode: false,
   );
 }

@@ -6,6 +6,7 @@ import '/widget/appbar_widget.dart';
 import '/widget/button_widget.dart';
 import '/widget/numbers_widget.dart';
 import '/widget/profile_widget.dart';
+import '/widget/chart.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -18,20 +19,22 @@ class _ProfilePageState extends State<ProfilePage> {
     const user = UserPreferences.myUser;
 
     return Scaffold(
-      appBar: buildAppBar(context),
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
+          const SizedBox(height: 10),
           ProfileWidget(
             onClicked: () async {},
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 5),
           buildName(user),
-          const SizedBox(height: 24),
+          const SizedBox(height: 5),
           Center(child: buildUpgradeButton()),
-          const SizedBox(height: 24),
+          const SizedBox(height: 5),
           NumbersWidget(),
-          const SizedBox(height: 48),
+          const SizedBox(height: 5),
+          const MyHomePage(),
+          const SizedBox(height: 5),
           buildAbout(user),
         ],
       ),

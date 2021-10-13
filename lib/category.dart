@@ -6,15 +6,6 @@
 // https://www.dartlang.org/guides/language/effective-dart/style#ordering
 import 'package:flutter/material.dart';
 
-const String someText =
-    "Murph :\n"
-    "For Time\n"
-    "1 mile run\n"
-    "100 pull-ups\n"
-    "200 push-ups\n"
-    "300 squats\n"
-    "1 mile run";
-
 /// A custom [Category] widget.
 ///
 /// The widget is composed on an [Icon] and [Text]. Tapping on the widget shows
@@ -68,14 +59,14 @@ class Category extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 10.0),
                       child: Icon(
                         iconLocation,
-                        size: 30.0,
+                        size: 35.0,
                       ),
                     ),
                     Center(
                       child: Text(
                         name,
                         textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 10, color: Colors.black, fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]
