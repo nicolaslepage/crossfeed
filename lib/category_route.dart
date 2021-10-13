@@ -13,7 +13,7 @@ final _backgroundColor = Colors.brown[50];
 /// This is the 'home' screen of the Unit Converter. It shows a header and
 /// a list of [Categories].
 ///
-/// While it is named CategoryRoute, a more apt name would be CategoryScreen,
+/// While it is named FeedRoute, a more apt name would be CategoryScreen,
 /// because it is responsible for the UI at the route's destination.
 class CategoryRoute extends StatelessWidget {
   const CategoryRoute({Key? key}) : super(key: key);

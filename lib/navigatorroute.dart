@@ -1,37 +1,37 @@
 import 'package:flutter/material.dart';
 
+import '/page/profile_page.dart';
+
+
 // You can use a relative import, i.e. `import 'category.dart';` or
 // a package import, as shown below.
 // More details at http://dart-lang.github.io/linter/lints/avoid_relative_lib_imports.html
 import 'category_route.dart';
 
 /// This is the stateful widget that the main application instantiates.
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class navigator_route extends StatefulWidget {
+  const navigator_route({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<navigator_route> createState() => _navigator_routeState();
 }
 
 /// This is the private State class that goes with MyStatefulWidget.
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _navigator_routeState extends State<navigator_route> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    CategoryRoute(),
-    Text(
+  static final List<Widget> _widgetOptions = <Widget>[
+    const CategoryRoute(),
+    const Text(
       'Index 1: Add WOD',
       style: optionStyle,
     ),
-    Text(
+    const Text(
       'Index 2: Benchmark list',
       style: optionStyle,
     ),
-    Text(
-      'Index 3: Profile',
-      style: optionStyle,
-    ),
+    ProfilePage()
   ];
 
   void _onItemTapped(int index) {
