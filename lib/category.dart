@@ -46,10 +46,11 @@ class Category extends StatelessWidget {
   // Theme ancestor in the tree. Below, we obtain the display1 text theme.
   // See https://api.flutter.dev/flutter/material/Theme-class.html
   Widget build(BuildContext context) {
-    // TODO: Build the custom widget here, referring to the Specs.
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 10.0),
       child:  Material(
+        elevation: 5,
         color: Colors.white,
         child: Column(
             children : [
@@ -94,7 +95,7 @@ class Category extends StatelessWidget {
                 color: Colors.white,
                 child:
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children : [
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 5.0),
@@ -148,11 +149,15 @@ class Category extends StatelessWidget {
                 color: Colors.brown[100],
                 child:
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children : const [
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 5.0),
                         child: ImageIcon( AssetImage('assets/fist_outlined.png'), size : 30.0,),
+                      ),
+                      SizedBox(
+                        height: 24,
+                        child: VerticalDivider(thickness :2.0),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 5.0),
@@ -160,6 +165,10 @@ class Category extends StatelessWidget {
                           Icons.message_outlined,
                           size: 30.0,
                         ),
+                      ),
+                      SizedBox(
+                        height: 24,
+                        child: VerticalDivider(thickness :2.0),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 5.0),

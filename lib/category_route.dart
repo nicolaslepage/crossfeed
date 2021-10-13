@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'category.dart';
 
-final _backgroundColor = Colors.brown[50];
+final _backgroundColor = Colors.white;
 
 /// Category Route (screen).
 ///

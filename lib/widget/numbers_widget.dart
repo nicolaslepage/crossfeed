@@ -9,7 +9,7 @@ class NumbersWidget extends StatelessWidget {
           buildDivider(),
           buildButton(context, '35', 'Following'),
           buildDivider(),
-          buildButton(context, '5 000 000', 'Followers'),
+          buildButton(context, '5 M', 'Followers'),
         ],
       );
   Widget buildDivider() => Container(
