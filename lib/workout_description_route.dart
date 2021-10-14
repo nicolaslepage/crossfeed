@@ -26,10 +26,16 @@ class workout_description_route extends StatelessWidget {
     children: <Widget>[
       for(var item in given_wod.cat ) Padding(
       padding: const EdgeInsets.all(5.0),
-      child:ButtonWidget(
-        text: item,
-        onClicked: () {},
+      child:ElevatedButton(
+          style: ElevatedButton.styleFrom(
+          shape: const StadiumBorder(),
+          primary: Colors.red[900],
+          onPrimary: Colors.black,
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
+        child: Text(item),
+        onPressed: () {},
+      ),
       ),
   ],
   );
