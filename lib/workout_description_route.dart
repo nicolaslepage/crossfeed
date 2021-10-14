@@ -52,27 +52,36 @@ class workout_description_route extends StatelessWidget {
         ),
         backgroundColor: Colors.brown[50],
       ),
-      body: Center(
-        child :Container(
-        color: Colors.grey[100],
-        child : Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Center(
-            child: RichText(
-              textAlign: TextAlign.center,
-              text: TextSpan(
-                text: given_wod.name,
-                style: const TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
-                children:  <TextSpan>[
-                  TextSpan(text: given_wod.type1, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
-                  TextSpan(text: given_wod.mouvements, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300)),
-                ],
+      body: Column(
+        children : [
+          Center(
+            child :Container(
+              color: Colors.grey[100],
+              child : Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Center(
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      text: given_wod.name,
+                      style: const TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
+                      children:  <TextSpan>[
+                        TextSpan(text: given_wod.type1, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
+                        TextSpan(text: given_wod.mouvements, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300)),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
-      ),
-    ),
-    ),
+          Row(
+            children :[
+
+            ]
+          )
+        ]
+      )
     );
   }
 }
