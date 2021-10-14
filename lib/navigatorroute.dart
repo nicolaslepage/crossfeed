@@ -25,11 +25,15 @@ class _navigator_routeState extends State<navigator_route> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static final List<Widget> _widgetOptions = <Widget>[
     const CategoryRoute(),
+    Wodlist_route(),
     const Text(
       'Index 1: Add WOD',
       style: optionStyle,
     ),
-    Wodlist_route(),
+    const Text(
+      'Index 4: Challenges',
+      style: optionStyle,
+    ),
     ProfilePage()
   ];
 
@@ -81,14 +85,19 @@ class _navigator_routeState extends State<navigator_route> {
             label: 'Feed',
           ),
           BottomNavigationBarItem(
+            icon: ImageIcon( AssetImage('assets/fist_outlined.png'),),
+            activeIcon: ImageIcon( AssetImage('assets/fist.png'),),
+            label: 'Benchmark',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.add_circle_outline_rounded),
             activeIcon: Icon(Icons.add_circle_rounded),
             label: 'Add WOD',
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon( AssetImage('assets/fist_outlined.png'),),
-            activeIcon: ImageIcon( AssetImage('assets/fist.png'),),
-            label: 'Benchmark list',
+            icon: ImageIcon( AssetImage('assets/conquer_outlined.png'),),
+            activeIcon: ImageIcon( AssetImage('assets/conquer.png'),),
+            label: 'Challenges',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.portrait_outlined),
@@ -99,10 +108,11 @@ class _navigator_routeState extends State<navigator_route> {
         currentIndex: _selectedIndex,
 
         selectedItemColor: Colors.black,
+        unselectedFontSize: 10,
         selectedLabelStyle : const TextStyle( fontWeight: FontWeight.bold),
 
         backgroundColor: Colors.brown[200],
-        iconSize: 30.0,
+        iconSize: 25.0,
 
         onTap: _onItemTapped,
       ),

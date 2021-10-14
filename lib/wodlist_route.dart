@@ -32,7 +32,6 @@ class Wodlist_route extends StatelessWidget {
       <String>[ 'gym', 'endurance'],
       <String>[ 'weightlifting', 'gym', 'aerobic'],
       <String>[ 'gym', 'aerobic'],
-      <String>[ 'gym', 'aerobic'],
       <String>[ 'weightlifting', 'aerobic'],
       <String>[ 'weightlifting'],
       <String>['aerobic'],
