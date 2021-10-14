@@ -50,9 +50,9 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10.0),
+      padding: const EdgeInsets.only(bottom: 20.0),
       child:  Material(
-        elevation: 5,
+        elevation: 10,
         color: Colors.white,
         child: Column(
             children : [
@@ -75,7 +75,7 @@ class Category extends StatelessWidget {
                   ]
               ),
               Container(
-                color: Colors.grey[200],
+                color: Colors.grey[100],
                 child : Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Center(
@@ -154,29 +154,29 @@ class Category extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children : const [
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: 5.0),
+                        padding: EdgeInsets.symmetric(vertical: 3.0),
                         child: like_button(),
                       ),
                       SizedBox(
-                        height: 24,
+                        height: 20,
                         child: VerticalDivider(thickness :2.0),
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: 5.0),
+                        padding: EdgeInsets.symmetric(vertical: 3.0),
                         child: Icon(
                           Icons.message_outlined,
-                          size: 30.0,
+                          size: 20.0,
                         ),
                       ),
                       SizedBox(
-                        height: 24,
+                        height: 20,
                         child: VerticalDivider(thickness :2.0),
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: 5.0),
+                        padding: EdgeInsets.symmetric(vertical: 3.0),
                         child: Icon(
                           Icons.share_outlined,
-                          size: 30.0,
+                          size: 20.0,
                         ),
                       ),
                     ]

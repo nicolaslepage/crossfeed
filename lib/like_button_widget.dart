@@ -21,7 +21,7 @@ class _like_buttonState extends State<like_button> {
   Widget build(BuildContext context) {
     return Center(
       child: IconButton(
-        iconSize: 30,
+        iconSize: 20,
         icon: _selected_icon,
         color: Colors.black,
         tooltip: 'Add to favorite',

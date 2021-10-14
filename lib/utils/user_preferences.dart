@@ -9,3 +9,4 @@ class UserPreferences {
     isDarkMode: false,
   );
 }
+

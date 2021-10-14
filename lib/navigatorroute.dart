@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'wodlist_route.dart';
+
 import '/page/profile_page.dart';
 
 
@@ -27,10 +29,7 @@ class _navigator_routeState extends State<navigator_route> {
       'Index 1: Add WOD',
       style: optionStyle,
     ),
-    const Text(
-      'Index 2: Benchmark list',
-      style: optionStyle,
-    ),
+    Wodlist_route(),
     ProfilePage()
   ];
 

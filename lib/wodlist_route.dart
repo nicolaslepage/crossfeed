@@ -1,146 +1,151 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
+import 'model/workout.dart';
+import 'workout_description_route.dart';
 
-import 'category.dart';
-
-final _backgroundColor = Colors.brown[50];
-
-/// Category Route (screen).
-///
-/// This is the 'home' screen of the Unit Converter. It shows a header and
-/// a list of [Categories].
-///
-/// While it is named FeedRoute, a more apt name would be CategoryScreen,
-/// because it is responsible for the UI at the route's destination.
-class CategoryRoute extends StatelessWidget {
-  const CategoryRoute({Key? key}) : super(key: key);
-
-  static const _categoryNames = <String>[
-    'Martin Btx',
-    'Nicolas Lepage',
-    'Ugo Pelissier',
-    'Mathis Egnell',
-    'Gabriele Dabbaghian',
-    'Hanane El Hajji',
-    'Raphael Toledano',
-  ];
-
-  static const _categoryWorkoutname = <String>[
-    'Murph:\n',
-    'Fran:\n',
-    'Annie:\n',
-    'Kalsu:\n',
-    'Grace: \n',
-    'Jerry: \n',
-    'Chelsea: \n',
-  ];
-
-  static const _categoryWorkouttype = <String>[
-    'For Time\n',
-    'For Time\n',
-    'For Time\n',
-    'For Time\n',
-    'For Time\n',
-    'For Time\n',
-    'EMOM 30min\n',
-  ];
-
-  static const _categoryWorkoutmouvements = <String>[
-
-    "1 mile run\n"
-        "100 pull-ups\n"
-        "200 push-ups\n"
-        "300 squats\n"
-        "1 mile run",
-
-    "21-15-9\n"
-        "Thrusters\n"
-        "Pull-ups",
-
-    "50-40-30-20-10\n"
-        "Double unders\n"
-        "Sit-ups",
-
-    "100 Thrusters\n"
-        "EMOM: 5 burpees",
-
-    '30 Ground to overhead',
-
-    "Run 1 Mile\n"
-        "Row 2K\n"
-        "Run 1 Mile",
-
-    "5 Pull-ups\n"
-        "10 Push-ups\n"
-        "15 Squats",
-  ];
-
-  static const _categoryscore = <String>[
-    '00:32:15',
-    '00:04:45',
-    '00:15:18',
-    '00:28:05',
-    '00:07:08',
-    '00:29:12',
-    '26 Rounds',
-  ];
-
-  static const _categoryweight = <String>[
-    'Scaled',
-    'RX',
-    'Scaled',
-    'RX',
-    'Scaled',
-    'RX',
-    'Scaled',
-  ];
-
-  static const _categoryrank = <String>[
-    '999th',
-    '1st ;)',
-    '200th',
-    '12th',
-    '19th',
-    '327th',
-    '512th',
-  ];
-
-  /// Makes the correct number of rows for the list view.
-  ///
-  /// For portrait, we construct a [ListView] from the list of category widgets.
-  Widget _buildCategoryWidgets(List<Widget> categories) {
-    return ListView.builder(
-      itemBuilder: (BuildContext context, int index) => categories[index],
-      itemCount: categories.length,
-    );
-  }
-
+class Wodlist_route extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final categories = <Category>[];
+
+    const _categoryNames = <String>[
+      'Martin Btx',
+      'Nicolas Lepage',
+      'Ugo Pelissier',
+      'Mathis Egnell',
+      'Gabriele Dabbaghian',
+      'Hanane El Hajji',
+      'Raphael Toledano',
+    ];
+
+    const _categorytype = <String>[
+      'Hero',
+      'Girl',
+      'Girl',
+      'Hero',
+      'Girl',
+      'Hero',
+      'Girl',
+    ];
+
+    const _categoryWorkoutname = <String>[
+      'Murph:\n',
+      'Fran:\n',
+      'Annie:\n',
+      'Kalsu:\n',
+      'Grace: \n',
+      'Jerry: \n',
+      'Chelsea: \n',
+    ];
+
+    const _categoryWorkouttype = <String>[
+      'For Time\n',
+      'For Time\n',
+      'For Time\n',
+      'For Time\n',
+      'For Time\n',
+      'For Time\n',
+      'EMOM 30min\n',
+    ];
+
+    const _categoryWorkoutmouvements = <String>[
+
+      "1 mile run\n"
+          "100 pull-ups\n"
+          "200 push-ups\n"
+          "300 squats\n"
+          "1 mile run",
+
+      "21-15-9\n"
+          "Thrusters\n"
+          "Pull-ups",
+
+      "50-40-30-20-10\n"
+          "Double unders\n"
+          "Sit-ups",
+
+      "100 Thrusters\n"
+          "EMOM: 5 burpees",
+
+      '30 Ground to overhead',
+
+      "Run 1 Mile\n"
+          "Row 2K\n"
+          "Run 1 Mile",
+
+      "5 Pull-ups\n"
+          "10 Push-ups\n"
+          "15 Squats",
+    ];
+
+    const _categoryscore = <String>[
+      '00:32:15',
+      '00:04:45',
+      '00:15:18',
+      '00:28:05',
+      '00:07:08',
+      '00:29:12',
+      '26 Rounds',
+    ];
+
+    const _categoryweight = <String>[
+      'Scaled',
+      'RX',
+      'Scaled',
+      'RX',
+      'Scaled',
+      'RX',
+      'Scaled',
+    ];
+
+    const _categoryrank = <String>[
+      '999th',
+      '1st ;)',
+      '200th',
+      '12th',
+      '19th',
+      '327th',
+      '512th',
+    ];
+
+    final wod_examples = <Workout>[];
 
     for (var i = 0; i < _categoryNames.length; i++) {
-      categories.add(Category(
-        name: _categoryNames[i],
-        workout: _categoryWorkoutname[i],
-        workouttype: _categoryWorkouttype[i],
+      wod_examples.add(Workout(
+        name: _categoryWorkoutname[i],
+        type1: _categoryWorkouttype[i],
         mouvements: _categoryWorkoutmouvements[i],
-        score: _categoryscore[i],
-        weight: _categoryweight[i],
-        rank: _categoryrank[i],
-        iconLocation: Icons.account_circle_outlined,
       ));
     }
 
-    final listView = Container(
-      color: _backgroundColor,
-      padding: const EdgeInsets.symmetric(vertical: 0.0),
-      child: _buildCategoryWidgets(categories),
-    );
+    return GridView.count(
+      // Create a grid with 2 columns. If you change the scrollDirection to
+      // horizontal, this produces 2 rows.
+      primary: false,
+      padding: const EdgeInsets.all(10),
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      crossAxisCount: 2,
+      // Generate 100 widgets that display their index in the List.
+      children: List.generate(wod_examples.length, (index) {
+        return RaisedButton(
 
-    return listView;
+          elevation: 5,
+          onPressed: () {
+            Navigator.push (
+              context,
+              MaterialPageRoute(builder: (context) => workout_description_route(given_wod :wod_examples[index]))
+            );
+          },
+          color: Colors.brown[50],
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10)),
+          child: Center(
+          child: Text(
+            wod_examples[index].name,
+            style: Theme.of(context).textTheme.headline5,
+          ),
+        ),
+        );
+      }),
+    );
   }
 }
