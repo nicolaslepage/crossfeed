@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     const ticks = [20, 40, 60, 80];
-    var features = ["Strength", "Weightlifting", "Gymnastics", "Mobility", "Aerobic", "endurance"];
+    var features = ["St", "WL", "Gym", "Mob", "Aero", "End"];
     var data = [
       [50,40,25,10,50,75],
     ];

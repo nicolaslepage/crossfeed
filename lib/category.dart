@@ -6,6 +6,8 @@
 // https://www.dartlang.org/guides/language/effective-dart/style#ordering
 import 'package:flutter/material.dart';
 
+import 'like_button_widget.dart';
+
 /// A custom [Category] widget.
 ///
 /// The widget is composed on an [Icon] and [Text]. Tapping on the widget shows
@@ -153,7 +155,7 @@ class Category extends StatelessWidget {
                     children : const [
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 5.0),
-                        child: ImageIcon( AssetImage('assets/fist_outlined.png'), size : 30.0,),
+                        child: like_button(),
                       ),
                       SizedBox(
                         height: 24,
@@ -185,4 +187,5 @@ class Category extends StatelessWidget {
       ),
     );
   }
+
 }
