@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'model/workout.dart';
 import 'workout_description_route.dart';
@@ -24,6 +26,17 @@ class Wodlist_route extends StatelessWidget {
       'Girl',
       'Hero',
       'Girl',
+    ];
+
+    const List<List<String>> _categorycat = [
+      <String>[ 'gym', 'endurance'],
+      <String>[ 'weightlifting', 'gym', 'aerobic'],
+      <String>[ 'gym', 'aerobic'],
+      <String>[ 'gym', 'aerobic'],
+      <String>[ 'weightlifting', 'aerobic'],
+      <String>[ 'weightlifting'],
+      <String>['aerobic'],
+      <String>[ 'gym', 'endurance'],
     ];
 
     const _categoryWorkoutname = <String>[
@@ -113,6 +126,7 @@ class Wodlist_route extends StatelessWidget {
         name: _categoryWorkoutname[i],
         type1: _categoryWorkouttype[i],
         mouvements: _categoryWorkoutmouvements[i],
+        cat: _categorycat[i],
       ));
     }
 

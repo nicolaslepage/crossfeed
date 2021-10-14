@@ -7,6 +7,7 @@
 import 'package:flutter/material.dart';
 
 import 'model/workout.dart';
+import 'widget/button_widget.dart';
 
 /// A custom [Category] widget.
 ///
@@ -19,6 +20,19 @@ class workout_description_route extends StatelessWidget {
     Key? key,
     required this.given_wod,
   }) : super(key: key);
+
+  Widget buildUpgradeButton() => Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      for(var item in given_wod.cat ) Padding(
+      padding: const EdgeInsets.all(5.0),
+      child:ButtonWidget(
+        text: item,
+        onClicked: () {},
+        ),
+      ),
+  ],
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -73,11 +87,7 @@ class workout_description_route extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            children :[
-
-            ]
-          )
+          buildUpgradeButton(),
         ]
       )
     );
