@@ -158,25 +158,25 @@ class Category extends StatelessWidget {
                         child: like_button(),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 25,
                         child: VerticalDivider(thickness :2.0),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 3.0),
                         child: Icon(
                           Icons.message_outlined,
-                          size: 20.0,
+                          size: 25.0,
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 25,
                         child: VerticalDivider(thickness :2.0),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 3.0),
                         child: Icon(
                           Icons.share_outlined,
-                          size: 20.0,
+                          size: 25.0,
                         ),
                       ),
                     ]

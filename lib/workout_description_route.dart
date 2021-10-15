@@ -6,8 +6,8 @@
 // https://www.dartlang.org/guides/language/effective-dart/style#ordering
 import 'package:flutter/material.dart';
 
-import 'widget/button_widget.dart';
 import 'model/workout.dart';
+import 'widget/bar_chart.dart';
 
 /// A custom [Category] widget.
 ///
@@ -21,6 +21,24 @@ class workout_description_route extends StatelessWidget {
     required this.given_wod,
   }) : super(key: key);
 
+  Widget buildUpgradeButton() => Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      for(var item in given_wod.cat ) Padding(
+      padding: const EdgeInsets.all(5.0),
+      child:ElevatedButton(
+          style: ElevatedButton.styleFrom(
+          shape: const StadiumBorder(),
+          primary: Colors.red[900],
+          onPrimary: Colors.black,
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+        ),
+        child: Text(item),
+        onPressed: () {},
+      ),
+      ),
+  ],
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -75,11 +93,8 @@ class workout_description_route extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            children :[
-
-            ]
-          )
+          buildUpgradeButton(),
+          const BarChartSample3(),
         ]
       )
     );
