@@ -1,11 +1,11 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'dart:io';
+import 'dart:math';
 
 class _BarChart extends StatelessWidget {
   const _BarChart({Key? key}) : super(key: key);
 
-  static const int _min = 34*60+13;
-  static const int _max = 7200;
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +21,32 @@ class _BarChart extends StatelessWidget {
     );
   }
 
+  static const int _min = 34*60+13;
+  static const int _max = 7200;
+  static int legend1_1 =  ((_min+(_max-_min)*0.05)/60).floor();
+  static int legend1_2 = ((_min+(_max-_min)*0.05)%60).floor();
+  static int legend2_1 =  ((_min+(_max-_min)*0.25)/60).floor();
+  static int legend2_2 = ((_min+(_max-_min)*0.25)%60).floor();
+  static int legend3_1 =  ((_min+(_max-_min)*0.5)/60).floor();
+  static int legend3_2 = ((_min+(_max-_min)*0.5)%60).floor();
+  static int legend4_1 =  ((_min+(_max-_min)*0.75)/60).floor();
+  static int legend4_2 = ((_min+(_max-_min)*0.75)%60).floor();
+  static int legend5_1 =  (_max/60).floor();
+  static int legend5_2 = (_max)%60.floor();
+
+  static String legend1 = legend1_1.toString() + ':' + legend1_2.toString();
+  static String legend2 = legend2_1.toString() + ':' + legend2_2.toString();
+  static String legend3 = legend3_1.toString() + ':' + legend3_2.toString();
+  static String legend4 = legend4_1.toString() + ':' + legend4_2.toString();
+  static String legend5 = legend5_1.toString() + ':' + legend5_2.toString();
+
+
   BarTouchData get barTouchData => BarTouchData(
     enabled: false,
     touchTooltipData: BarTouchTooltipData(
       tooltipBgColor: Colors.transparent,
       tooltipPadding: const EdgeInsets.all(0),
-      tooltipMargin: 8,
+      tooltipMargin: 0,
       getTooltipItem: (
           BarChartGroupData group,
           int groupIndex,
@@ -49,15 +69,15 @@ class _BarChart extends StatelessWidget {
     bottomTitles: SideTitles(
       showTitles: true,
       getTextStyles: (context, value) => const TextStyle(
-        color: Color(0xff7589a2),
+        color: Colors.black,
         fontWeight: FontWeight.bold,
-        fontSize: 14,
+        fontSize: 10,
       ),
-      margin: 20,
+      margin: 5,
       getTitles: (double value) {
         switch (value.toInt()) {
           case 0:
-            return (_min+(_max-_min)*0.05).toString();
+            return legend1;
           case 1:
             return '';
           case 2:
@@ -65,7 +85,7 @@ class _BarChart extends StatelessWidget {
           case 3:
             return '';
           case 4:
-            return (_min+(_max-_min)*0.25).toString();
+            return legend2;
           case 5:
             return '';
           case 6:
@@ -75,7 +95,7 @@ class _BarChart extends StatelessWidget {
           case 8:
             return '';
           case 9:
-            return (_min+(_max-_min)*0.5).toString();
+            return legend3;
           case 10:
             return '';
           case 11:
@@ -85,7 +105,7 @@ class _BarChart extends StatelessWidget {
           case 13:
             return '';
           case 14:
-            return (_min+(_max-_min)*0.75).toString();
+            return legend4;
           case 15:
             return '';
           case 16:
@@ -95,7 +115,7 @@ class _BarChart extends StatelessWidget {
           case 18:
             return '';
           case 19:
-            return (_min+(_max-_min)*1).toString();
+            return legend5;
           default:
             return '';
         }
@@ -115,7 +135,7 @@ class _BarChart extends StatelessWidget {
       x: 0,
       barRods: [
         BarChartRodData(
-            y: 1, colors: [Colors.brown, Colors.red])
+            y: 0, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -123,7 +143,7 @@ class _BarChart extends StatelessWidget {
       x: 2,
       barRods: [
         BarChartRodData(
-            y: 2, colors: [Colors.brown, Colors.red])
+            y: 1, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -131,7 +151,7 @@ class _BarChart extends StatelessWidget {
       x: 2,
       barRods: [
         BarChartRodData(
-            y: 3, colors: [Colors.brown, Colors.red])
+            y: 2, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -139,7 +159,7 @@ class _BarChart extends StatelessWidget {
       x: 3,
       barRods: [
         BarChartRodData(
-            y: 4, colors: [Colors.brown, Colors.red])
+            y: 4, colors: [Colors.blueAccent, Colors.greenAccent])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -147,7 +167,7 @@ class _BarChart extends StatelessWidget {
       x: 4,
       barRods: [
         BarChartRodData(
-            y: 5, colors: [Colors.brown, Colors.red])
+            y: 5, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -155,7 +175,7 @@ class _BarChart extends StatelessWidget {
       x: 5,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 6, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -163,7 +183,7 @@ class _BarChart extends StatelessWidget {
       x: 6,
       barRods: [
         BarChartRodData(
-            y: 7, colors: [Colors.brown, Colors.red])
+            y: 6, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -171,7 +191,7 @@ class _BarChart extends StatelessWidget {
       x: 7,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 7, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -179,7 +199,7 @@ class _BarChart extends StatelessWidget {
       x: 8,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 7, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -187,7 +207,7 @@ class _BarChart extends StatelessWidget {
       x: 9,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 7, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -195,7 +215,7 @@ class _BarChart extends StatelessWidget {
       x: 10,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 6, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -203,7 +223,7 @@ class _BarChart extends StatelessWidget {
       x: 11,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 6, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -211,7 +231,7 @@ class _BarChart extends StatelessWidget {
       x: 12,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 5, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -219,7 +239,7 @@ class _BarChart extends StatelessWidget {
       x: 13,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 5, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -227,7 +247,7 @@ class _BarChart extends StatelessWidget {
       x: 14,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 4, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -235,7 +255,7 @@ class _BarChart extends StatelessWidget {
       x: 15,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 3, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -243,7 +263,7 @@ class _BarChart extends StatelessWidget {
       x: 16,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 2, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -251,7 +271,7 @@ class _BarChart extends StatelessWidget {
       x: 17,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 2, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -259,7 +279,7 @@ class _BarChart extends StatelessWidget {
       x: 18,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 2, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -267,7 +287,7 @@ class _BarChart extends StatelessWidget {
       x: 19,
       barRods: [
         BarChartRodData(
-            y: 6, colors: [Colors.brown, Colors.red])
+            y: 1, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
       ],
       showingTooltipIndicators: [1],
     ),
@@ -285,13 +305,16 @@ class BarChartSample3State extends State<BarChartSample3> {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.7,
+      aspectRatio: 2.5,
       child: Card(
         elevation: 0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-        color: Colors.brown[100],
-        child: const _BarChart(),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        color: Colors.transparent,
+        child: const Padding(
+                padding: EdgeInsets.all(10),
+                child : _BarChart(),
       ),
+    ),
     );
   }
 }
