@@ -39,13 +39,23 @@ class Wodlist_route extends StatelessWidget {
     ];
 
     const _categoryWorkoutname = <String>[
-      'Murph:\n',
-      'Fran:\n',
-      'Annie:\n',
-      'Kalsu:\n',
-      'Grace: \n',
-      'Jerry: \n',
-      'Chelsea: \n',
+      'Murph:',
+      'Fran:',
+      'Annie:',
+      'Kalsu:',
+      'Grace:',
+      'Jerry:',
+      'Chelsea:',
+    ];
+
+    const _categoryh_g = <String>[
+      'hero',
+      'girl',
+      'girl',
+      'hero',
+      'girl',
+      'hero',
+      'girl',
     ];
 
     const _categoryWorkouttype = <String>[
@@ -137,20 +147,21 @@ class Wodlist_route extends StatelessWidget {
       crossAxisSpacing: 10,
       mainAxisSpacing: 10,
       crossAxisCount: 2,
+      childAspectRatio: 3,
       // Generate 100 widgets that display their index in the List.
       children: List.generate(wod_examples.length, (index) {
-        return RaisedButton(
-
-          elevation: 5,
+        return ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: const StadiumBorder(),
+            onPrimary: Colors.white,
+            primary:  Colors.brown[50],
+          ),
           onPressed: () {
             Navigator.push (
               context,
               MaterialPageRoute(builder: (context) => workout_description_route(given_wod :wod_examples[index]))
             );
           },
-          color: Colors.brown[50],
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)),
           child: Center(
           child: Text(
             wod_examples[index].name,
