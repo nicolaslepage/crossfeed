@@ -30,7 +30,7 @@ class workout_description_route extends StatelessWidget {
           style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
           primary: Color(0xFFEE293A),
-          onPrimary: Colors.black,
+          onPrimary: Color(0xFF2D1A45),
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
         child: Text(item),
@@ -86,10 +86,10 @@ class workout_description_route extends StatelessWidget {
                     textAlign: TextAlign.center,
                     text: TextSpan(
                       text: given_wod.name + '\n',
-                      style: const TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 30, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold),
                       children:  <TextSpan>[
-                        TextSpan(text: given_wod.type1, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
-                        TextSpan(text: given_wod.mouvements, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300)),
+                        TextSpan(text: given_wod.type1, style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold)),
+                        TextSpan(text: given_wod.mouvements, style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.w300)),
                       ],
                     ),
                   ),
@@ -111,9 +111,9 @@ class workout_description_route extends StatelessWidget {
                     textAlign: TextAlign.center,
                     text: const TextSpan(
                       text: 'Your Score : ',
-                      style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold),
                       children:  <TextSpan>[
-                        TextSpan(text: ' 45:32', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300)),
+                        TextSpan(text: ' 45:32', style: TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.w300)),
                       ],
                     ),
                   ),
@@ -131,9 +131,9 @@ class workout_description_route extends StatelessWidget {
                     textAlign: TextAlign.center,
                     text: const TextSpan(
                       text: 'Your Rank : ',
-                      style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold),
                       children:  <TextSpan>[
-                        TextSpan(text: ' %10th - 1754th', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300)),
+                        TextSpan(text: ' %10th - 1754th', style: TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.w300)),
                       ],
                     ),
                   ),

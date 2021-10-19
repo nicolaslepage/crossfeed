@@ -45,12 +45,12 @@ class _ProfilePageState extends State<ProfilePage> {
         children: [
           Text(
             user.name,
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+            style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2D1A45), fontSize: 24),
           ),
           const SizedBox(height: 4),
           Text(
             user.email,
-            style: const TextStyle(color: Colors.grey),
+            style: TextStyle(color: const Color(0xFF2D1A45).withOpacity(0.6)),
           )
         ],
       );
@@ -67,12 +67,12 @@ class _ProfilePageState extends State<ProfilePage> {
           children: [
             const Text(
               'About',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
             Text(
               user.about,
-              style: const TextStyle(fontSize: 16, height: 1.4),
+              style: const TextStyle(fontSize: 16, color: Color(0xFF2D1A45), height: 1.4),
             ),
           ],
         ),
