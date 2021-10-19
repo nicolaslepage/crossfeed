@@ -133,7 +133,7 @@ class _BarChart extends StatelessWidget {
           x: 0,
           barRods: [
             BarChartRodData(
-                y: 0, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 0, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -141,7 +141,7 @@ class _BarChart extends StatelessWidget {
           x: 2,
           barRods: [
             BarChartRodData(
-                y: 1, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 1, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -149,7 +149,7 @@ class _BarChart extends StatelessWidget {
           x: 2,
           barRods: [
             BarChartRodData(
-                y: 2, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 2, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -157,7 +157,7 @@ class _BarChart extends StatelessWidget {
           x: 3,
           barRods: [
             BarChartRodData(
-                y: 4, colors: [Colors.blueAccent, Colors.greenAccent])
+                y: 4, colors: [Color(0xFF54C1A2), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -165,7 +165,7 @@ class _BarChart extends StatelessWidget {
           x: 4,
           barRods: [
             BarChartRodData(
-                y: 5, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 5, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -173,7 +173,7 @@ class _BarChart extends StatelessWidget {
           x: 5,
           barRods: [
             BarChartRodData(
-                y: 6, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 6, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -181,7 +181,7 @@ class _BarChart extends StatelessWidget {
           x: 6,
           barRods: [
             BarChartRodData(
-                y: 6, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 6, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -189,7 +189,7 @@ class _BarChart extends StatelessWidget {
           x: 7,
           barRods: [
             BarChartRodData(
-                y: 7, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 7, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -197,7 +197,7 @@ class _BarChart extends StatelessWidget {
           x: 8,
           barRods: [
             BarChartRodData(
-                y: 7, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 7, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -205,7 +205,7 @@ class _BarChart extends StatelessWidget {
           x: 9,
           barRods: [
             BarChartRodData(
-                y: 7, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 7, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -213,7 +213,7 @@ class _BarChart extends StatelessWidget {
           x: 10,
           barRods: [
             BarChartRodData(
-                y: 6, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 6, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -221,7 +221,7 @@ class _BarChart extends StatelessWidget {
           x: 11,
           barRods: [
             BarChartRodData(
-                y: 6, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 6, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -229,7 +229,7 @@ class _BarChart extends StatelessWidget {
           x: 12,
           barRods: [
             BarChartRodData(
-                y: 5, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 5, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -237,7 +237,7 @@ class _BarChart extends StatelessWidget {
           x: 13,
           barRods: [
             BarChartRodData(
-                y: 5, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 5, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -245,7 +245,7 @@ class _BarChart extends StatelessWidget {
           x: 14,
           barRods: [
             BarChartRodData(
-                y: 4, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 4, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -253,7 +253,7 @@ class _BarChart extends StatelessWidget {
           x: 15,
           barRods: [
             BarChartRodData(
-                y: 3, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 3, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -261,7 +261,7 @@ class _BarChart extends StatelessWidget {
           x: 16,
           barRods: [
             BarChartRodData(
-                y: 2, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 2, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -269,7 +269,7 @@ class _BarChart extends StatelessWidget {
           x: 17,
           barRods: [
             BarChartRodData(
-                y: 2, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 2, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -277,7 +277,7 @@ class _BarChart extends StatelessWidget {
           x: 18,
           barRods: [
             BarChartRodData(
-                y: 2, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 2, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),
@@ -285,7 +285,7 @@ class _BarChart extends StatelessWidget {
           x: 19,
           barRods: [
             BarChartRodData(
-                y: 1, colors: [Color(0xFF3E2723), Color(0xFFB71c1c)])
+                y: 1, colors: [Color(0xFFEE293A), Color(0xFFEDE1CB)])
           ],
           showingTooltipIndicators: [1],
         ),

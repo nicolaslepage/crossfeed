@@ -62,6 +62,7 @@ class Category extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 10.0),
                       child: Icon(
                         iconLocation,
+                        color: Color(0xFF2D1A45),
                         size: 35.0,
                       ),
                     ),
@@ -69,13 +70,22 @@ class Category extends StatelessWidget {
                       child: Text(
                         name,
                         textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontSize: 15, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold),
                       ),
                     ),
                   ]
               ),
               Container(
-                color: Colors.grey[100],
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                        Color(0xFFEDE1CB).withOpacity(0.15),
+                        Color(0xFF54C1A2).withOpacity(0.15),
+                      ],
+                    )
+                ),
                 child : Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Center(
@@ -83,10 +93,10 @@ class Category extends StatelessWidget {
                       textAlign: TextAlign.center,
                       text: TextSpan(
                         text: workout,
-                        style: const TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontSize: 30, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold),
                         children:  <TextSpan>[
-                          TextSpan(text: workouttype, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
-                          TextSpan(text: mouvements, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300)),
+                          TextSpan(text: workouttype, style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold)),
+                          TextSpan(text: mouvements, style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.w300)),
                         ],
                       ),
                     ),
@@ -106,9 +116,9 @@ class Category extends StatelessWidget {
                             textAlign: TextAlign.center,
                             text: TextSpan(
                               text: 'Score: \n',
-                              style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300),
+                              style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.w300),
                               children:  <TextSpan>[
-                                TextSpan(text: score, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
+                                TextSpan(text: score, style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold)),
                               ],
                             ),
                           ),
@@ -121,9 +131,9 @@ class Category extends StatelessWidget {
                             textAlign: TextAlign.center,
                             text: TextSpan(
                               text: 'Weight: \n',
-                              style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300),
+                              style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.w300),
                               children:  <TextSpan>[
-                                TextSpan(text: weight, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
+                                TextSpan(text: weight, style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold)),
                               ],
                             ),
                           ),
@@ -136,9 +146,9 @@ class Category extends StatelessWidget {
                             textAlign: TextAlign.center,
                             text: TextSpan(
                               text: 'Rank: \n',
-                              style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w300),
+                              style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.w300),
                               children:  <TextSpan>[
-                                TextSpan(text: rank, style: const TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),
+                                TextSpan(text: rank, style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold)),
                               ],
                             ),
                           ),
@@ -148,7 +158,7 @@ class Category extends StatelessWidget {
                 ),
               ),
               Container(
-                color: Colors.brown[100],
+                color: Color(0xFFEDE1CB).withOpacity(0.3),
                 child:
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -165,6 +175,7 @@ class Category extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 3.0),
                         child: Icon(
                           Icons.message_outlined,
+                          color: Color(0xFF2D1A45),
                           size: 25.0,
                         ),
                       ),
@@ -176,6 +187,7 @@ class Category extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 3.0),
                         child: Icon(
                           Icons.share_outlined,
+                          color: Color(0xFF2D1A45),
                           size: 25.0,
                         ),
                       ),

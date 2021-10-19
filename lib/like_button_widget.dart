@@ -23,7 +23,7 @@ class _like_buttonState extends State<like_button> {
       child: IconButton(
         iconSize: 30,
         icon: _selected_icon,
-        color: Colors.black,
+        color: Color(0xFF2D1A45),
         tooltip: 'Add to favorite',
         onPressed: () {
           setState(() {

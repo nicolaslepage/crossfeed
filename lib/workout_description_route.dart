@@ -29,7 +29,7 @@ class workout_description_route extends StatelessWidget {
       child:ElevatedButton(
           style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
-          primary: Colors.red[900],
+          primary: Color(0xFFEE293A),
           onPrimary: Colors.black,
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
@@ -43,38 +43,42 @@ class workout_description_route extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0.0,
-        title: RichText(
-          text: TextSpan(
-            text: 'Cross',
-            style: TextStyle(
-                fontSize: 30,
-                color: Colors.red.shade900,
-                fontWeight: FontWeight.bold),
-            children: const <TextSpan>[
-              TextSpan(
-                  text: '/',
-                  style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold)),
-              TextSpan(
-                  text: 'Feed',
-                  style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold)),
-            ],
-          ),
-        ),
-        backgroundColor: Colors.brown[50],
+      elevation: 0.0,
+      iconTheme: IconThemeData(
+        color: Color(0xFF2D1A45), //change your color here
       ),
+      title: RichText(
+        text: const TextSpan(
+          text: 'Cross',
+          style: TextStyle(
+              fontSize: 30,
+              color: Color(0xFFEE293A),
+              fontWeight: FontWeight.bold),
+          children: <TextSpan>[
+            TextSpan(
+                text: '/',
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Color(0xFF2D1A45),
+                    fontWeight: FontWeight.bold)),
+            TextSpan(
+                text: 'Feed',
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Color(0xFF54C1A2),
+                    fontWeight: FontWeight.bold)),
+          ],
+        ),
+      ),
+      backgroundColor: Colors.white,
+    ),
       body: Column(
         children : [
           Center(
             child :Container(
-              color: Colors.grey[100],
+              color: Colors.transparent,
               child : Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Center(

@@ -46,32 +46,33 @@ class _navigator_routeState extends State<navigator_route> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
         title: RichText(
-          text: TextSpan(
+          text: const TextSpan(
             text: 'Cross',
             style: TextStyle(
                 fontSize: 30,
-                color: Colors.red.shade900,
+                color: Color(0xFFEE293A),
                 fontWeight: FontWeight.bold),
-            children: const <TextSpan>[
+            children: <TextSpan>[
               TextSpan(
                   text: '/',
                   style: TextStyle(
                       fontSize: 30,
-                      color: Colors.black,
+                      color: Color(0xFF2D1A45),
                       fontWeight: FontWeight.bold)),
               TextSpan(
                   text: 'Feed',
                   style: TextStyle(
                       fontSize: 30,
-                      color: Colors.black,
+                      color: Color(0xFF54C1A2),
                       fontWeight: FontWeight.bold)),
             ],
           ),
         ),
-        backgroundColor: Colors.brown[50],
+        backgroundColor: Colors.white,
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -107,11 +108,12 @@ class _navigator_routeState extends State<navigator_route> {
         ],
         currentIndex: _selectedIndex,
 
-        selectedItemColor: Colors.black,
+        selectedItemColor: Color(0xFFEE293A),
+        unselectedItemColor: Color(0xFF2D1A45),
         unselectedFontSize: 10,
         selectedLabelStyle : const TextStyle( fontWeight: FontWeight.bold),
 
-        backgroundColor: Colors.brown[200],
+        backgroundColor: Colors.white,
         iconSize: 25.0,
 
         onTap: _onItemTapped,

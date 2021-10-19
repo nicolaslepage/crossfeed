@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' show pi, cos, sin;
 
 const defaultGraphColors = [
-  Color(0xFFB71c1c),
+  Color(0xFFEE293A),
   Colors.blue,
   Colors.red,
   Colors.orange,

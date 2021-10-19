@@ -48,14 +48,63 @@ class Wodlist_route extends StatelessWidget {
       'Chelsea:',
     ];
 
-    const _categoryh_g = <String>[
-      'hero',
-      'girl',
-      'girl',
-      'hero',
-      'girl',
-      'hero',
-      'girl',
+    const  myGradient = <LinearGradient>[
+      LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [
+          Color(0xFFEE293A),
+          Color(0xFFEDE1CB),
+        ],
+      ),
+      LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [
+          Color(0xFF54C1A2),
+          Color(0xFFEDE1CB),
+        ],
+      ),
+      LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [
+          Color(0xFF54C1A2),
+          Color(0xFFEDE1CB),
+        ],
+      ),
+      LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [
+          Color(0xFFEE293A),
+          Color(0xFFEDE1CB),
+        ],
+      ),
+      LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [
+          Color(0xFF54C1A2),
+          Color(0xFFEDE1CB),
+        ],
+      ),
+      LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [
+          Color(0xFFEE293A),
+          Color(0xFFEDE1CB),
+        ],
+      ),
+      LinearGradient(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        colors: [
+          Color(0xFF54C1A2),
+          Color(0xFFEDE1CB),
+        ],
+      ),
     ];
 
     const _categoryWorkouttype = <String>[
@@ -150,23 +199,27 @@ class Wodlist_route extends StatelessWidget {
       childAspectRatio: 3,
       // Generate 100 widgets that display their index in the List.
       children: List.generate(wod_examples.length, (index) {
-        return ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            onPrimary: Colors.white,
-            primary:  Colors.brown[50],
-          ),
+        return RaisedButton(
+          elevation: 10,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
+          padding: const EdgeInsets.all(0.0),
           onPressed: () {
             Navigator.push (
               context,
               MaterialPageRoute(builder: (context) => workout_description_route(given_wod :wod_examples[index]))
             );
           },
-          child: Center(
+          child: Ink(
+            decoration: BoxDecoration(
+            gradient: myGradient[index],
+            borderRadius: const BorderRadius.all(Radius.circular(80.0)),
+            ),
+        child:Center(
           child: Text(
             wod_examples[index].name,
-            style: Theme.of(context).textTheme.headline5,
+            style: TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold),
           ),
+        ),
         ),
         );
       }),
