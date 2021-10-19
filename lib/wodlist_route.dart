@@ -39,13 +39,13 @@ class Wodlist_route extends StatelessWidget {
     ];
 
     const _categoryWorkoutname = <String>[
-      'Murph:',
-      'Fran:',
-      'Annie:',
-      'Kalsu:',
-      'Grace:',
-      'Jerry:',
-      'Chelsea:',
+      'Murph',
+      'Fran',
+      'Annie',
+      'Kalsu',
+      'Grace',
+      'Jerry',
+      'Chelsea',
     ];
 
     const  myGradient = <LinearGradient>[

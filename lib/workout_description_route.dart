@@ -85,7 +85,7 @@ class workout_description_route extends StatelessWidget {
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                      text: given_wod.name + '\n',
+                      text: given_wod.name + ':\n',
                       style: const TextStyle(fontSize: 30, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold),
                       children:  <TextSpan>[
                         TextSpan(text: given_wod.type1, style: const TextStyle(fontSize: 20, color: Color(0xFF2D1A45), fontWeight: FontWeight.bold)),

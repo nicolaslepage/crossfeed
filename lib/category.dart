@@ -77,14 +77,10 @@ class Category extends StatelessWidget {
               ),
               Container(
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Color(0xFFEDE1CB).withOpacity(0.15),
-                        Color(0xFF54C1A2).withOpacity(0.15),
-                      ],
-                    )
+                    gradient: SweepGradient(
+                      colors: [const Color(0xFF2D1A45).withOpacity(0.1), const Color(0xFFEDE1CB).withOpacity(0.1), const Color(0xFF54C1A2).withOpacity(0.1),  const Color(0xFFEE293A).withOpacity(0.1), const Color(0xFF2D1A45).withOpacity(0.1),],
+                      stops: [0.0, 0.25, 0.5,0.75, 1],
+                    ),
                 ),
                 child : Padding(
                   padding: const EdgeInsets.all(5.0),

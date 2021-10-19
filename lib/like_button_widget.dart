@@ -17,20 +17,24 @@ class _like_buttonState extends State<like_button> {
 
   ImageIcon _selected_icon = ImageIcon( AssetImage('assets/fist_outlined.png'),);
 
+  Color _selected_color = Color(0xFF2D1A45);
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: IconButton(
         iconSize: 30,
         icon: _selected_icon,
-        color: Color(0xFF2D1A45),
+        color: _selected_color,
         tooltip: 'Add to favorite',
         onPressed: () {
           setState(() {
             if( tapped == 0 ){
               _selected_icon = ImageIcon( AssetImage('assets/fist.png'),);
+              _selected_color = Color(0xFFEE293A);
             }else{
               _selected_icon = ImageIcon( AssetImage('assets/fist_outlined.png'),);
+            _selected_color = Color(0xFF2D1A45);
             }
             tapped = (tapped + 1) % 2;
           });
