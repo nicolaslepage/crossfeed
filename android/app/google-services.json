@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "332750465585",
+    "project_id": "crossfeed-79dc9",
+    "storage_bucket": "crossfeed-79dc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332750465585:android:f59ed6c092891d028cc310",
+        "android_client_info": {
+          "package_name": "com.nicoxmartin.crossfeed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332750465585-68687tnrqgitggnpehu35gp43bma00j7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nicoxmartin.crossfeed",
+            "certificate_hash": "8d5989e7ba5177f577c74ab44a373879bc354439"
+          }
+        },
+        {
+          "client_id": "332750465585-8d50r0mn98c746uosvjd1j2e8kc1bcri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB60h2o-PbdGQVKuWbd_tEdgXrDCPcBDgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332750465585-8d50r0mn98c746uosvjd1j2e8kc1bcri.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "332750465585-p1n18ehigekupjohakg52lq4u201t42o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nicoxmartin.crossfeed"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
