@@ -48,7 +48,9 @@ class _navigator_routeState extends State<navigator_route> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        toolbarHeight: 40,
         elevation: 0.0,
+        backgroundColor: Colors.white,
         title: RichText(
           text: const TextSpan(
             text: 'Cross',
@@ -72,7 +74,6 @@ class _navigator_routeState extends State<navigator_route> {
             ],
           ),
         ),
-        backgroundColor: Colors.white,
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -107,7 +108,6 @@ class _navigator_routeState extends State<navigator_route> {
           ),
         ],
         currentIndex: _selectedIndex,
-
         selectedItemColor: Color(0xFFEE293A),
         unselectedItemColor: Color(0xFF2D1A45),
         unselectedFontSize: 10,

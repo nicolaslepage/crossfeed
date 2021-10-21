@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '/model/user.dart';
 import '/utils/user_preferences.dart';
-import '/widget/appbar_widget.dart';
 import '/widget/button_widget.dart';
 import '/widget/numbers_widget.dart';
 import '/widget/profile_widget.dart';
@@ -19,6 +18,7 @@ class _ProfilePageState extends State<ProfilePage> {
     const user = UserPreferences.myUser;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
