@@ -79,6 +79,7 @@ flutter:
      - assets/user.png
      - assets/conquer.png
      - assets/conquer_outlined.png
+     - assets/google_signin_button.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

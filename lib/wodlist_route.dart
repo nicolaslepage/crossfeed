@@ -200,7 +200,7 @@ class Wodlist_route extends StatelessWidget {
       // Generate 100 widgets that display their index in the List.
       children: List.generate(wod_examples.length, (index) {
         return RaisedButton(
-          elevation: 10,
+          elevation: 3,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
           padding: const EdgeInsets.all(0.0),
           onPressed: () {

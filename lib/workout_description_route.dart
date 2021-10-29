@@ -27,13 +27,14 @@ class workout_description_route extends StatelessWidget {
       for(var item in given_wod.cat ) Padding(
       padding: const EdgeInsets.all(5.0),
       child:ElevatedButton(
-          style: ElevatedButton.styleFrom(
+          style: OutlinedButton.styleFrom(
+          elevation: 1,
           shape: const StadiumBorder(),
           primary: Color(0xFFEE293A),
-          onPrimary: Color(0xFF2D1A45),
-          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+          side: BorderSide(color: Color(0xFFEE293A), width: 2.5),
+          backgroundColor: Colors.white,
         ),
-        child: Text(item),
+        child: Text(item, style: const TextStyle( fontWeight: FontWeight.bold) ,),
         onPressed: () {},
       ),
       ),

@@ -52,7 +52,7 @@ class Category extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20.0),
       child:  Material(
-        elevation: 10,
+        elevation: 3,
         color: Colors.white,
         child: Column(
             children : [
